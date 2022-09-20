@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<!--Program name: TicTacToe fxml file 
+Programmer: Joona Huomo 
+Date: January 4 2021 
+Description: Contains the layout of the gameboard -->
+<!-- Overall outline; contains everything in the calculator -->
+
+<BorderPane stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tictactoe.TicTacToeController">
+	<top>
+
+		<!-- Contains all menu things -->
+		<MenuBar BorderPane.alignment="CENTER">
+			<menus>
+				<Menu mnemonicParsing="false" text="Actions">
+					<items>
+						<MenuItem mnemonicParsing="false" onAction="#menuClickHandler" text="Play" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuClickHandler" text="Load Game" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuClickHandler" text="Save" />
+						<MenuItem mnemonicParsing="false" onAction="#menuClickHandler" text="Quit" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="Help">
+					<items>
+						<MenuItem mnemonicParsing="false" onAction="#menuClickHandler" text="How to Play" />
+                  <MenuItem mnemonicParsing="false" onAction="#menuClickHandler" text="About" />
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+	</top>
+	<left>
+
+		<!-- The gameboard with all the buttons -->
+		<GridPane fx:id="gameBoard" BorderPane.alignment="CENTER">
+			<children>
+				<Button fx:id="b00" onAction="#buttonClickHandler" prefHeight="100.0" prefWidth="100.0" />
+				<Button fx:id="b01" onAction="#buttonClickHandler" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="1" />
+				<Button fx:id="b02" onAction="#buttonClickHandler" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="2" />
+				<Button fx:id="b10" onAction="#buttonClickHandler" prefHeight="100.0" prefWidth="100.0" GridPane.rowIndex="1" />
+				<Button fx:id="b11" onAction="#buttonClickHandler" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+				<Button fx:id="b12" onAction="#buttonClickHandler" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+				<Button fx:id="b20" onAction="#buttonClickHandler" prefHeight="100.0" prefWidth="100.0" GridPane.rowIndex="2" />
+				<Button fx:id="b21" onAction="#buttonClickHandler" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+				<Button fx:id="b22" onAction="#buttonClickHandler" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+			</children>
+			<columnConstraints>
+				<ColumnConstraints />
+				<ColumnConstraints />
+				<ColumnConstraints />
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints />
+				<RowConstraints />
+				<RowConstraints />
+			</rowConstraints>
+		</GridPane>
+	</left>
+	<bottom>
+		<GridPane prefHeight="78.0" prefWidth="295.0" BorderPane.alignment="CENTER">
+			<columnConstraints>
+				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+			</rowConstraints>
+			<children>
+
+				<!-- Scoreboard -->
+				<Label alignment="TOP_CENTER" prefHeight="40.0" prefWidth="150.0" text="Player 1" textAlignment="CENTER" textFill="RED">
+					<font>
+						<Font size="25.0" />
+					</font>
+				</Label>
+				<Label alignment="TOP_CENTER" prefHeight="40.0" prefWidth="150.0" text="Player 2" textAlignment="CENTER" textFill="#1500ff" GridPane.columnIndex="1">
+					<font>
+						<Font size="25.0" />
+					</font>
+				</Label>
+				<Label fx:id="scoreOne" alignment="CENTER" prefHeight="40.0" prefWidth="150.0" text="0" GridPane.rowIndex="1">
+					<font>
+						<Font size="25.0" />
+					</font>
+				</Label>
+				<Label fx:id="scoreTwo" alignment="CENTER" prefHeight="40.0" prefWidth="150.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+					<font>
+						<Font size="25.0" />
+					</font>
+				</Label>
+			</children>
+		</GridPane>
+	</bottom>
+</BorderPane>

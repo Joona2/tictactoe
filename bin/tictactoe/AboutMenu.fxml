@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<!--Program name: About Menu fxml file 
+Programmer: Joona Huomo 
+Date: January 4 2021 
+Description: Contains the layout of the About Menu -->
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="260.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tictactoe.TicTacToeController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="300.0" prefWidth="260.0">
+         <children>
+            <Label text="About" />
+            <TextArea id="othertext" editable="false" prefHeight="204.0" prefWidth="260.0" stylesheets="@application.css" text="About the creator:&#10;Name: Joona Huomo&#10;Birthdate: 23 March 2003&#10;Currently in Grade 12 (as of Jan 2021)&#10;&#10;About the project:&#10;This project was created as an assignment&#10;for the Grade 12 ICS4U course, it is called&#10;&quot;Java FX Tic Tac Toe&quot;. Interestingly, this &#10;project took quitea few hours to complete,&#10;and it is quite nice now that it is done :)." />
+            <Button mnemonicParsing="false" onAction="#closeWindow" text="OK" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</Pane>

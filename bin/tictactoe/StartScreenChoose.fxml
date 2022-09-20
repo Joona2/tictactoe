@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!--Program name: Start Screen Choose fxml file 
+Programmer: Joona Huomo 
+Date: January 4 2021 
+Description: Contains the layout of the Start Screen -->
+
+<BorderPane prefHeight="400.0" prefWidth="300.0"
+	stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="tictactoe.StartScreenController">
+	<center>
+		<VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="300.0"
+			stylesheets="@application.css" BorderPane.alignment="CENTER">
+			<children>
+				<TextArea editable="false" prefHeight="170.0"
+					prefWidth="300.0" stylesheets="@application.css"
+					text="Would you like to play &#10;Player vs. Player(PvP),&#10;or Player vs. Computer&#10;(PvE)?">
+					<font>
+						<Font size="25.0" />
+					</font>
+				</TextArea>
+				<Button mnemonicParsing="false"
+					onAction="#changeSceneButtonHandlerTwo" prefHeight="80.0"
+					prefWidth="150.0" text="PvP">
+					<VBox.margin>
+						<Insets top="30.0" />
+					</VBox.margin>
+				</Button>
+				<Button id="t" mnemonicParsing="false"
+					onAction="#changeSceneButtonHandlerTwo" prefHeight="80.0"
+					prefWidth="150.0" text="PvE">
+					<VBox.margin>
+						<Insets top="10.0" />
+					</VBox.margin>
+				</Button>
+			</children>
+		</VBox>
+	</center>
+</BorderPane>

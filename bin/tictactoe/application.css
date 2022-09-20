@@ -1,0 +1,79 @@
+/*
+ * Program name: Application css
+ * Programmer: Joona Huomo
+ * Date: January 4th 2021
+ * Description: Contains all the different colour options, and aesthetics for the buttons as well as the backgrounds
+ */
+
+/*button*/
+.button{
+   -fx-padding: 8 15 15 15;
+    -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;
+    -fx-background-radius: 8;
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),
+        #9d4024,
+        #d86e3a,
+        radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c54e2c);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+    -fx-font-weight: bold;
+    -fx-font-size: 2.1em;
+}
+
+/*winning button*/
+.winning-button {
+    -fx-padding: 8 15 15 15;
+    -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;
+    -fx-background-radius: 8;
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),
+        #9d4024,
+        #d86e3a,
+        radial-gradient(center 50% 50%, radius 100%, #ffffff, #c54e2c);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+    -fx-font-weight: bold;
+    -fx-font-size: 2.1em;
+}
+
+/*text area*/
+.text-area { 
+	-fx-background-image: url("/images/wood_background.jpg");
+	-fx-font-size: 2.3em;
+	-fx-text-fill: white;
+} 
+
+/* text area content*/
+.text-area .content { 
+	-fx-background-image: url("/images/wood_background.jpg");
+}
+
+/*VBox*/
+VBox{
+	-fx-background-image: url("/images/wood_background.jpg");
+}
+
+/*Label*/
+.label{
+	-fx-background-image: url("/images/wood_background.jpg");
+	-fx-text-fill: white;
+}
+
+/*Gridpane*/
+GridPane{
+	-fx-background-image: url("/images/wood_background.jpg");
+}
+
+/*MenuBar*/
+MenuBar{
+	-fx-background-image: url("/images/wood_background.jpg");
+}
+.context-menu{
+	-fx-background-image: url("/images/wood_background.jpg");
+}
+
+/*Other text */
+#othertext { 
+	-fx-background-image: url("/images/wood_background.jpg");
+	-fx-font-size:1em;
+	-fx-text-fill: white;
+} 

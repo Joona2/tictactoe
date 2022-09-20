@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!--Program name: Computer Difficulty fxml file 
+Programmer: Joona Huomo 
+Date: January 4 2021 
+Description: Contains the layout of the computer difficulty scene -->
+
+<BorderPane prefHeight="400.0" prefWidth="300.0"
+	stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="tictactoe.ComputerDifficultyController">
+	<center>
+		<VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="300.0"
+			BorderPane.alignment="CENTER">
+			<children>
+				<TextArea editable="false" prefHeight="96.0"
+					prefWidth="300.0"
+					text="Would you like to play &#10;on Easy or Hard mode?">
+					<font>
+						<Font size="25.0" />
+					</font>
+				</TextArea>
+				<Button mnemonicParsing="false"
+					onAction="#changeSceneButtonHandlerTwo" prefHeight="80.0"
+					prefWidth="150.0" text="Easy">
+					<VBox.margin>
+						<Insets top="50.0" />
+					</VBox.margin>
+					<font>
+						<Font size="35.0" />
+					</font>
+				</Button>
+				<Button mnemonicParsing="false"
+					onAction="#changeSceneButtonHandlerTwo" prefHeight="80.0"
+					prefWidth="150.0" text="Hard">
+					<VBox.margin>
+						<Insets top="30.0" />
+					</VBox.margin>
+					<font>
+						<Font size="34.0" />
+					</font>
+				</Button>
+			</children>
+		</VBox>
+	</center>
+</BorderPane>
